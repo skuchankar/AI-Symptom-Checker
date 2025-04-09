@@ -1,0 +1,4 @@
+{
+    "classifier": DecisionTreeClassifier,
+    "symptoms": ["fever", "cough", "headache", ...]
+}

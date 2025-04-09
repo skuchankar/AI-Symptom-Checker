@@ -1,0 +1,36 @@
+<!-- templates/feedback.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Feedback</h2>
+    <form action="/feedback" method="post">
+      <label for="rating">Rating:</label><br>
+      <select name="rating">
+        <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+        <option value="4">⭐️⭐️⭐️⭐️</option>
+        <option value="3">⭐️⭐️⭐️</option>
+        <option value="2">⭐️⭐️</option>
+        <option value="1">⭐️</option>
+      </select><br>
+
+      <label for="suggestion_type">Type:</label><br>
+      <select name="suggestion_type">
+        <option value="Feature">Feature</option>
+        <option value="Bug">Bug</option>
+        <option value="Improvement">Improvement</option>
+      </select><br>
+
+      <label for="text">Your Feedback:</label><br>
+      <textarea name="text" rows="4" required></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+<!-- templates/admin_dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Admin Dashboard</h2>
+    <h3>Recent Activity</h3>
+    <ul>
+      {% for session in sessions %}
+        <li>{{ session.user_name }} - {{ session.symptoms }} → {{ session.predicted_condition }} ({{ session.confidence }}%)</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Feedback Overview</h3>
+    <ul>
+      {% for fb in feedback %}
+        <li><strong>{{ fb.user_name }}</strong>: {{ fb.text }} ({{ fb.rating }}/5)</li>
+      {% endfor %}
+    </ul>
+
+    <a href="/dashboard" class="btn">Back</a>
+  </div>
+</body>
+</html>

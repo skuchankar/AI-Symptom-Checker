@@ -1,0 +1,28 @@
+<!-- templates/symptom_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Symptom Check</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Symptom Checker</h2>
+    <form action="/symptom-check" method="post">
+      <label for="symptoms">Enter your symptoms (comma separated):</label><br>
+      <textarea name="symptoms" rows="4" placeholder="e.g. fever, cough, fatigue" required></textarea><br>
+      <button type="submit">Check</button>
+    </form>
+
+    {% if prediction %}
+      <div class="result">
+        <h3>Prediction:</h3>
+        <p><strong>Condition:</strong> {{ prediction.condition }}</p>
+        <p><strong>Confidence:</strong> {{ prediction.confidence }}%</p>
+        <p><strong>Next Steps:</strong> {{ prediction.next_steps }}</p>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>

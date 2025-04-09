@@ -1,0 +1,107 @@
+/* static/css/style.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f6fc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button,
+.btn {
+  background-color: #3498db;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.btn.danger {
+  background-color: #e74c3c;
+}
+
+.btn.danger:hover {
+  background-color: #c0392b;
+}
+
+.btn.admin {
+  background-color: #8e44ad;
+}
+
+.btn.admin:hover {
+  background-color: #732d91;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.result {
+  background-color: #dff9fb;
+  border-left: 6px solid #3498db;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
